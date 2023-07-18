@@ -1,0 +1,29 @@
+﻿<link href="~/Content/PagedList.css" rel="stylesheet" />
+@model PagedList.PagedList<FestivalMarket.Models.EF.Sales>
+@using PagedList.Mvc;
+@using PagedList;
+<link rel="stylesheet" href="~/Content/assets/styles/khuyen-mai.css">
+<div class="row km-list">
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="item">
+                    <div class="img">
+                        <img src="@item.Image" alt="">
+                    </div>
+                    <div class="title">
+                        <a style="text-decoration: none" href="/chi-tiet-sales/@item.Slug-@item.Id">@item.Title</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+
+<div class="text-center w-100 m-3">
+    @*<button class="btn bg-tim text-white m-3">XEM THÊM</button>*@
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+</div>
+</div>

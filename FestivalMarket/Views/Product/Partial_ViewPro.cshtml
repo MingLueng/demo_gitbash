@@ -1,0 +1,41 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.Product>
+
+@if (Model != null && Model.Any())
+{
+
+    foreach (var item in Model)
+    {
+        <div>
+            <div class="item-slide">
+                <div class="image-slide-home">
+                    <img class="w-100" src="@item.Image" alt="@item.Title">
+                </div>
+                <div class="title-news bg-hong-phan p-3">
+
+                    <h3 class="font-20 color-red"><a style="text-decoration: none" href="/chi-tiet-products/@item.Slug-@item.Id">@item.Title</a></h3>
+                    <p class="font-13 text-justify ">
+                        @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+
+}
+@section scripts{
+    <script>
+        $('.slide-three').slick({
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+        });
+    </script>
+}
+

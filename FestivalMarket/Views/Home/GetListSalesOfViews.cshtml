@@ -1,0 +1,17 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.Sales>
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <div class="col-12 col-lg-4">
+            <div class="km-item mb-4">
+                <div class="km-img">
+                    <img class="w-100" src="@item.Image" alt="KM">
+                </div>
+                <div class="km-comtent py-4 px-3">
+                    <h4 class="mb-0 font-20"> <a style="text-decoration: none" href="/chi-tiet-sales/@item.Slug-@item.Id">@item.Title</a></h4>
+                </div>
+            </div>
+        </div>
+    }
+}

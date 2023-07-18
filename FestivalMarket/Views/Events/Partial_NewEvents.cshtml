@@ -1,0 +1,17 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.Events>
+<div class="row items-list">
+    @if(Model !=null && Model.Any())
+    {
+        foreach (var item in Model)
+            {
+                <div class="col-6 items">
+                    <div class="image">
+                        <img src="@item.Image" class="w-100" alt="item">
+                    </div>
+                    <div style="font-size: 22px; color: #899a29;"><a style="text-decoration:none" href="/chi-tiet-events/@item.Slug-@item.Id">@item.Title</a></div>
+                    <div style="font-size: 18px; color: #ff6a00;">@Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))</div>
+                </div>
+            }
+        }
+
+</div>

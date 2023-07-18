@@ -1,0 +1,20 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.News>
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+           <div class="item-news-home">
+                <div class="image-news">
+                    <img class="w-100" src="@item.Image" alt="news">
+                </div>
+                <div class="title-news">
+                    <h3 class="font-20 color-tim">
+                        <a style="text-decoration: none" href="/chi-tiet/@item.Slug-@item.Id">@item.Title</a>
+                    </h3>
+                        @*<h3 class="font-20 color-red"> @Html.Raw(item.Description)</h3>*@
+
+            </div>
+           </div>
+
+    }
+}

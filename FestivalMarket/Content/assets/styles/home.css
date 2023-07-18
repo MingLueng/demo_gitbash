@@ -1,0 +1,208 @@
+.image-slide-home {
+    border-radius: 1rem;
+}
+
+.home-event {
+    background-image: url("/Content/assets/images/festivalmarket/bg-sk.png") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.item-slide {
+    padding: 1rem;
+}
+
+.home-event .slick-prev.slick-arrow {
+    background-image: url("/Content/assets/images/festivalmarket/btn-left.png") !important;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.home-event .slick-next.slick-arrow {
+    background-image: url("/Content/assets/images/festivalmarket/btn-right.png") !important;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+    .home-event .slick-next.slick-arrow::before,
+    .home-event .slick-prev.slick-arrow::before {
+        display: none;
+    }
+
+.home-event .slick-dots {
+    bottom: -2.5rem;
+}
+
+    .home-event .slick-dots li button:before {
+        font-size: 0.5rem;
+    }
+
+    .home-event .slick-dots li.slick-active button:before {
+        color: #8c2878;
+    }
+
+.bg-hong-phan {
+    background-color: #ffe6d5;
+}
+
+.home-content .news-btn > div {
+    justify-content: right;
+}
+
+.home-content .slick-dotted.slick-slider {
+    margin-bottom: 1rem;
+}
+
+.home-content .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active,
+.home-content .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    border: none;
+    color: #8c2878;
+}
+
+.home-content .nav-tabs {
+    border: none;
+}
+
+    .home-content .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        border-bottom: 5px solid #ff8228;
+    }
+
+.home-content .item-week {
+    border: 5px solid #8c2878;
+    border-radius: 1.5rem;
+}
+
+.home-content .title-hot-news {
+    border-bottom: 5px solid #8c2878;
+}
+
+.list-news-home {
+    border: 5px solid #8c2878;
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem;
+}
+
+.item-news-home {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+.list-news-home .item-news-home:last-child {
+    border-bottom: 0;
+}
+
+.home-content .home-festival {
+    background-image: url("/Content/assets/images/festivalmarket/bg-fes.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem 16rem;
+    margin-bottom: 20rem;
+}
+
+.home-festival .icon-fest {
+    width: 5rem;
+}
+
+.home-festival .item-fest {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    margin: auto;
+    z-index: 3;
+}
+
+.home .item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    height: calc(100% - 9rem);
+}
+
+    .home .item > div {
+        width: 100%;
+    }
+
+.home-festival .item-fest .item-icon-fes {
+    box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.home-km .home-km-detail {
+    background-image: url("/Content/assets/images/festivalmarket/bg-km.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-km .km-item {
+    border: 0.5rem solid #c92e2d;
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+}
+
+    .home-km .km-item.km-item-lg {
+        border-radius: 2rem;
+    }
+
+.home-fes-go .fes-go-detail {
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+}
+
+.home-content .home-week {
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 900.98px) {
+    .w-lg-75 {
+        width: 75%;
+    }
+
+    .w-lg-90 {
+        width: 90%;
+    }
+
+    .w-lg-33 {
+        width: 33%;
+    }
+}
+
+@media (max-width: 900.98px) {
+    .home-festival .item-fest {
+        width: 100%;
+    }
+
+    .home-festival .icon-fest {
+        width: 2.5rem;
+    }
+
+    .home-km .km-item.km-item-lg {
+        border-radius: 1rem;
+    }
+
+    .home-content .item-go-fes > div {
+        padding: 2rem;
+    }
+
+    .home-content .item-go-fes .item-level > div {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .home .item {
+        margin: 1rem 0;
+    }
+
+        .home .item > div {
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+}

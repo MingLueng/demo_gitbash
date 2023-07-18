@@ -1,0 +1,44 @@
+﻿
+    <div class="collapse border show objInfor ">
+        <div class="alert-danger mb-3 admins-h2 btn-red">
+            THÊM / CẬP NHẬT TÀI KHOẢN
+        </div>
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Tài khoản</label>
+            <input type="text" name="Account" class="form-control" id="account" value="">
+        </div>
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Mật khẩu</label>
+            <input type="text" name="Password" class="form-control" id="password" value="">
+        </div>
+
+       
+        <div class="form-group mb-3">
+            <label class="font-weight-bold mb-1">Trạng thái</label>
+            <input type="radio" name="IsActive" id="s1" data-value="1" value="1" class="ml-4"  /> <label for="s1" class="mt-1 ml-2">Hoạt động</label>
+            <input type="radio" name="IsActive" id="s2" data-value="0" value="0" class="ml-4" /> <label for="s2" class="mt-1 ml-2">Đang khóa</label>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+                <button type="button" class="btn btn btn-red"><i class="fas fa-reply-all"></i> Nhập lại</button>
+                <button type="button" class="btn btn-green btnSave"> <i class="far fa-save"></i> Ghi lại</button>
+            </div>
+        </div>
+        <div hidden>
+            <input type="text" name="Id" value="0" id="ID" />
+            <input type="text" name="CreatedDate" value="" />
+            <input type="text" name="ModifiedDate" value="" />
+            <div class="form-group mb-3">
+                <label class="font-weight-bold mb-1">Họ và tên</label>
+                <input type="text" name="Name" class="form-control" id="name" value="">
+            </div>
+            <div class="form-group mb-3">
+                <label class="font-weight-bold mb-1">Email</label>
+                <input type="text" name="Email" class="form-control" id="email" value="">
+            </div>
+            <div class="form-group mb-3">
+                <label class="font-weight-bold mb-1">Điện thoại</label>
+                <input type="text" name="Phone" class="form-control" id="phone" value="">
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,500 @@
+﻿* {
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 16px;
+    font-family: "FontsFree-Net-calibri-regular";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "calibrib";
+}
+
+header {
+    -webkit-box-shadow: 0px 10px 7px 0px rgba(207,203,207,1);
+    -moz-box-shadow: 0px 10px 7px 0px rgba(207,203,207,1);
+    box-shadow: 0px 10px 7px 0px rgba(207,203,207,1);
+    margin-bottom: 2rem;
+}
+
+    header a {
+        color: #000 !important;
+        text-decoration: none;
+        background-color: transparent;
+        font-weight: bold;
+    }
+
+.nav-link {
+    font-family: "calibrib";
+}
+
+.font-13 {
+    font-size: 1.3rem;
+}
+
+.font-10 {
+    font-size: 1.2rem;
+}
+
+.font-5 {
+    font-size: 0.5rem;
+}
+
+.font-20 {
+    font-size: 1.5rem;
+}
+
+.font-25 {
+    font-size: 2rem;
+}
+
+.bg-cam {
+    background-color: #ff8228;
+}
+
+.bg-tim {
+    background-color: #8c2878;
+}
+
+.color-tim {
+    color: #8c2878;
+}
+
+.color-red {
+    color: #ca2e2e;
+}
+
+.color-wh {
+    color: #fff;
+}
+
+.px-57 {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+.mx-57 {
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+}
+
+.mb-57 {
+    margin-bottom: 4.5rem;
+}
+
+.search-input .form-search {
+    border-radius: 2rem;
+    background-color: #e76406;
+    padding: 0 1rem;
+}
+
+.search-input input, .search-input input:focus-visible {
+    background-color: #e76406;
+    border: none;
+    outline: none;
+    width: 17rem;
+}
+
+.font-30 {
+    font-size: 1.82rem;
+}
+
+.icon-head > .icon-head-content {
+    width: 8rem;
+}
+
+.lang-head .lang-head-content {
+    width: 6rem;
+    justify-content: space-between;
+}
+
+.menu .option {
+    padding: 2rem;
+}
+
+    .menu .option a {
+        color: #000;
+        font-weight: bold;
+    }
+
+.font-33 {
+    font-size: 2.5rem;
+}
+
+.footer {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+
+.w-10 {
+    width: 10rem !important;
+}
+
+.footer .icon-head > .icon-head-content {
+    margin: auto;
+}
+
+.footer .logo-wh {
+    padding-bottom: 2rem;
+}
+
+.item-footer a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-bot .item-footer {
+    padding-bottom: 2rem;
+}
+
+    .menu-bot .item-footer:first-child {
+        padding-top: 3rem;
+    }
+
+.footer .input-sign,
+.footer .input-sign:focus-visible {
+    background-color: #e76406;
+    border: none;
+    outline: none;
+    width: 60%;
+    border-radius: 20px;
+    padding: 0.75rem 2rem;
+}
+
+.footer .detail-add span {
+    color: #fff;
+}
+
+.add-footer ul {
+    padding-left: 0;
+    padding-top: 1.5rem;
+}
+
+._header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.__header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.__header-flex-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+
+    .header .bot-header {
+        background-color: #fff;
+    }
+
+.icon-head i {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    padding: .5rem;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+    .icon-head i:last-child {
+        margin-right: 0 !important;
+    }
+
+.lang-head-content {
+    display: flex;
+    margin: 0 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+    .lang-head-content div {
+        margin: auto .5rem;
+        padding: .5rem .75rem;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+    }
+
+        .lang-head-content div.active {
+            color: #ff8228;
+            background-color: #fff;
+        }
+
+.search-input {
+    width: 60%;
+    margin: 0 2.5rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 7.5rem;
+    padding-left: 2.5rem;
+}
+
+.navbar-expand-lg .navbar-nav li:last-child .nav-link {
+    padding-right: 0rem;
+    padding-left: 2rem;
+}
+/* index  */
+.home {
+    min-height: 550px;
+    background-color: #ffe0ca;
+    border-radius: 1.3rem;
+    margin-bottom: 4rem;
+}
+
+    .home .item {
+        margin: 4rem 1rem;
+        padding: 0 1rem;
+    }
+
+.head-title h2 {
+    display: inline-block;
+    background-color: #8c2878;
+    color: #fff;
+    margin-bottom: 0;
+    padding: 0.5rem 5rem;
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+    font-size: 2.5rem;
+}
+
+.home-d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+}
+/*Liên hệ */
+.lien-he-title h2 {
+    display: inline-block;
+    background-color: #8c2878;
+    color: #fff;
+    margin-bottom: 0;
+    padding: .5rem 5rem;
+    border-top-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+    font-size: 2.5rem;
+}
+
+.lien-he {
+    min-height: 550px;
+    background-color: #ffe0ca;
+    border-radius: 1.3rem;
+    margin-bottom: 4rem;
+}
+
+    .lien-he .item {
+        margin: 4rem 1rem;
+        padding: 0 1rem;
+    }
+
+    .lien-he h3 {
+        color: #cc3838;
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    .lien-he .festival-market h3 {
+        padding-top: 3rem;
+    }
+
+    .lien-he p,
+    .lien-he address,
+    .lien-he p span {
+        color: #4f4e4e;
+        font-size: 1.5rem;
+    }
+
+    .lien-he .festival-market i {
+        color: #8c2878;
+        font-size: 1.5rem;
+    }
+
+.form-lien-he {
+    position: relative;
+    min-height: 5rem;
+    margin-bottom: 3rem;
+}
+
+    .form-lien-he .head {
+        min-height: 5rem;
+    }
+
+    .form-lien-he .title {
+        position: absolute;
+        background-color: #8c2878;
+        height: 5rem;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: calc(100% + 2.5rem);
+        left: -5rem;
+        z-index: 1;
+    }
+
+.form-tieu-de {
+    position: absolute;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+    .form-tieu-de input {
+        width: calc(100% - 4rem);
+        padding: .5rem 1rem;
+        border: 0;
+        border-bottom: 2px solid #ddd;
+    }
+
+        .form-tieu-de input::placeholder {
+            font-size: 1.5rem;
+            color: #ddd;
+            font-style: italic;
+            font-family: "CalibriRegular";
+        }
+
+        .form-tieu-de input:focus {
+            outline: none;
+            border-bottom: 2px solid #8c2878;
+        }
+
+.form-lien-he .title h3 {
+    display: block;
+    color: #fff;
+    padding-right: 1rem;
+    margin-bottom: 0rem
+}
+
+.form-lien-he .item {
+    margin: 3rem 2rem 3rem 0;
+    padding: 2rem;
+    min-height: 400px;
+    background-color: #8c2878;
+    border-radius: 1.5rem;
+}
+
+.text-area {
+    margin: 3rem 2rem 3rem 0;
+    min-height: 400px;
+    /* border:2px solid #8c2878; */
+    border-radius: 1.5rem;
+}
+
+    .text-area textarea {
+        width: 100%;
+        height: 400px;
+        border: 2px solid #8c2878;
+        border-radius: 1.5rem;
+        padding: 1rem .5rem;
+        font-size: 1.5rem;
+    }
+
+.title span {
+    display: block;
+    width: 3.55rem;
+    height: 3.45rem;
+    background-color: #8c2878;
+    position: absolute;
+    right: -28px;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.form-lien-he div > i {
+    color: #fcfcfc;
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-lien-he .item div > input {
+    color: #fcfcfc;
+    font-size: 1.5rem;
+    padding: .5rem;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+}
+
+    .form-lien-he .item div > input::placeholder {
+        padding-left: 2.5rem;
+        color: #bfbfbf;
+    }
+
+.form-lien-he .item > div {
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.form-lien-he textarea {
+    color: #6c6a6a;
+    font-size: 1.75rem;
+    font-style: italic;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.form-lien-he button {
+    font-family: "CalibriBold";
+    font-size: 1.2rem;
+}
+/*./Liên hệ */
+
+/* 
+@media only screen and (min-width: 1200px) {
+    *{
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 1360px) {
+    *{
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 1550px) {
+    *{
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 1660px) {
+    *{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    *{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    *{
+        font-size: 18px;
+    }
+}
+ */

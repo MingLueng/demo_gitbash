@@ -1,0 +1,60 @@
+﻿.khuyen-mai {
+    margin-top: 4rem;
+}
+
+    .khuyen-mai img {
+        width: 100%;
+    }
+
+    .khuyen-mai p {
+        margin-bottom: 0;
+    }
+
+.km-list .item {
+    margin-top: 1rem;
+}
+
+.noi-bat {
+    margin-top: 2.5rem;
+    border: 3px solid #8c2878;
+    min-height: 1250px;
+    width: 100%;
+    border-radius: 2rem;
+    position: relative;
+    background-image: url('/Content/assets/images/festivalmarket/pattern.png ');
+}
+
+    .noi-bat h2 {
+        position: absolute;
+        top: 0px;
+        transform: translate(-50%,-102%);
+        left: 50%;
+        padding: 0.75rem;
+        color: #fff;
+        border-top-right-radius: 8rem;
+        border-top-left-radius: 8rem;
+        width: 70%;
+    }
+
+    .noi-bat .item {
+        margin: 2rem;
+        background-color: #fff;
+        border-radius: 29px;
+        -webkit-box-shadow: 0px 0px 29px 15px rgba(230,223,230,1);
+        -moz-box-shadow: 0px 0px 29px 15px rgba(230,223,230,1);
+        box-shadow: 0px 0px 29px 15px rgba(230,223,230,1);
+    }
+
+    .noi-bat .content {
+        margin: 25px;
+        padding-bottom: 10px;
+    }
+
+.khuyen-mai h5 {
+    color: #c82828;
+}
+
+.khuyen-mai .title > p, .noi-bat p, .noi-bat a {
+    color: #8c2878;
+    font-size: .9rem;
+}

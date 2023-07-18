@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.Sales>
+@*@{
+        var newsview = ViewBag.news as IEnumerable<FestivalMarket.Models.EF.News>;
+
+    }*@
+
+<div class="noi-bat">
+    <h2 class="bg-tim text-center">
+        Bài Viết Mới
+    </h2>
+
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            <div class="img">
+                <img src="@item.Image" alt="">
+            </div>
+            <div class="content">
+                <h5><a style="text-decoration: none" href="/chi-tiet-sales/@item.Slug-@item.Id">@item.Title</a></h5>
+                <p>
+                    @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))
+                </p>
+                <p>
+                    <a style="text-decoration:none" href="/chi-tiet-sales/@item.Slug-@item.Id">Xem chi tiết >></a>
+                </p>
+            </div>
+        </div>
+    }
+
+</div>
+
+
+

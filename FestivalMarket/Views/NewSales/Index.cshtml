@@ -1,0 +1,37 @@
+﻿@model FestivalMarket.Models.EF.Sales
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/assets/styles/khuyen-mai.css">
+@{
+    var lstSales = ViewBag.lstNewSales as FestivalMarket.Models.EF.Sales;
+}
+<section class="content-page">
+    <div class="container-fluid px-57 khuyen-mai">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="km-first">
+                    <h2>KHUYẾN MÃI</h2>
+                    <div>
+                        <img src="@lstSales.Image" alt="" style="width:850px;height:500px;">
+                    </div>
+                    <div>
+
+                        <h5><a style="text-decoration: none"href="/chi-tiet-sales/@lstSales.Slug-@lstSales.Id">@lstSales.Title</a></h5>
+                    </div>
+                </div>
+                @Html.Action("Partial_NewSales", "NewSales")
+            </div>
+            <div class="col-md-4">
+                @Html.Action("Partial_ViewNew", "NewSales")
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts{
+
+
+}
+
+

@@ -1,0 +1,890 @@
+﻿@media only screen and (max-width: 419px) {
+    #product-container .container, #product-container .product {
+        margin: 0 15px !important;
+        max-width: 100% !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        padding: 0.5em 0 0.5em 0;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    #banner-index {
+        font-size: 8px;
+    }
+
+    #banner-index .box {
+        padding: .5em;
+        padding-bottom: 0;
+    }
+
+    #banner-index h1, #banner-index h2 {
+        font-size: 12px;
+        margin-bottom: -0.5rem;
+    }
+
+    #banner-index h1 > span, #banner-index h2 > span {
+        color: #43782b;
+        font-size: 38px;
+    }
+
+    #banner-index .note {
+        margin-top: 4%;
+        width: 80%;
+        font-size: 14px;
+        line-height: 10px;
+        margin-bottom: 0;
+        top: 35%;
+    }
+
+    #banner-index .note p {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        font-size: 12px;
+        line-height: 1.1;
+    }
+
+    #banner-index .content a {
+        font-size: 7px;
+        margin-top: 6em;
+    }
+
+    .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 0 2px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .slick-dots li.slick-active button, .slick-dots li button {
+        color: #fff;
+        opacity: 1;
+        border-radius: 100%;
+        border: 1.5px solid #aabc44;
+        width: 15px;
+        height: 15px;
+    }
+
+    .slick-dots li button:before {
+        width: 9px;
+        height: 9px;
+        position: absolute;
+        content: "";
+        background: #ffffff;
+        border-radius: 50%;
+        top: 100%;
+        left: 100%;
+        transform: translate(-131%, -132%);
+    }
+
+    #_spnb h2.heading {
+        padding: 1em 0 0 0;
+        font-size: 20px;
+    }
+
+    #_spnb img.imgBx1 {
+        width: 50px;
+        height: auto;
+        right: 1rem;
+        top: 0;
+    }
+
+    #_spnb .list-hotproduct {
+        margin: 0 5%;
+    }
+
+    #_spnb div.item {
+        padding: 1%;
+    }
+
+    #_spnb div.item > h3 a {
+        padding: 3px 0px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.90);
+        font-size: 14px;
+    }
+
+    #_spnb .slick-prev, #_spnb .slick-next {
+        top: 39%;
+    }
+
+    #_spnb img.imgBx {
+        width: 100px;
+        bottom: -10rem;
+    }
+
+    .introduce .heading {
+        top: 0em;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 0px;
+    }
+
+    .introduce .contentBx .title {
+        font-size: 2.5em;
+        margin-top: -60px;
+        padding: 0;
+        /* right: 0; */
+        position: absolute;
+    }
+
+    .introduce .contentBx {
+        z-index: 19;
+        /* top: 5rem; */
+        /* transform: translateX(10%); */
+        padding-left: 0px;
+        left: 5%;
+    }
+
+    .introduce .contentBx .content {
+        margin-top: -2.5em;
+    }
+
+    .introduce .contentBx p {
+        font-size: .8rem;
+        width: 70%;
+    }
+
+    .introduce .number-phone {
+        display: none;
+    }
+
+    .introduce .btn {
+        padding: .5rem 1rem;
+        font-size: 8px;
+    }
+
+    .professional-tea {
+        margin: 0;
+        position: relative;
+    }
+
+    #_nghe_nhan h2 {
+        font-size: 20px;
+        padding: 1rem;
+    }
+
+    .professional-tea .heading {
+        position: absolute;
+        top: 10px;
+        padding: 1.0em 0;
+    }
+
+    .professional-tea > .nghe-nhan {
+        margin-top: 60px;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    ._nghe_nhan {
+        height: auto !important;
+    }
+
+    #_nghe_nhan .slick-prev, #_nghe_nhan .slick-next {
+        top: 39%;
+    }
+
+    #_nghe_nhan .slick-prev {
+        left: 25px;
+    }
+
+    #_nghe_nhan .slick-next {
+        right: 25px;
+    }
+
+    #_spnb .slick-prev {
+        left: 15px;
+    }
+
+    #_spnb .slick-next {
+        right: 15px;
+    }
+
+    #_nghe_nhan div.item p {
+        margin: 0px 50px;
+        padding: 0;
+    }
+
+    #_nghe_nhan > div > img {
+        width: 100vw !important;
+    }
+
+    #_nghe_nhan {
+        height: auto;
+    }
+
+    #_nghe_nhan > div.buy-now > img {
+        width: 100vw !important;
+    }
+
+    #_nghe_nhan div.item {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    #_nghe_nhan .buy-now h2 {
+        padding: 1rem 0;
+    }
+
+
+    .buy-now input[type="text"] {
+        width: 50%;
+        border: 1px solid #aabc44;
+        padding: 0 0 1px 4px;
+        font-size: 12px !important;
+    }
+
+    #_nghe_nhan .buy-now {
+        padding-bottom: 2em;
+    }
+
+    .buy-now button.btn {
+        text-align: center;
+        background-color: #aabc44;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-left: 10px;
+        height: 30px;
+        width: 100px;
+        font-weight: bold;
+    }
+
+    #_nghe_nhan .buy-now-content {
+        padding: 0px;
+        top: 5px;
+    }
+
+    .buy-now button.px-5 {
+        padding-left: 1rem !important;
+        padding-right: 3rem !important;
+    }
+
+    .footer {
+        color: #222222;
+        height: auto;
+        background: url('../images/trang-chu/fotter-tea.png') right bottom no-repeat;
+        background-size: auto;
+    }
+
+    footer {
+        background-color: #f1f1e7;
+    }
+
+    .footer h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer img.imgBx {
+        display: none;
+    }
+
+    .footer .imgBx {
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    .news .main-content {
+        padding: .5em;
+    }
+
+    .news li {
+        flex-wrap: wrap;
+    }
+
+    .news li img, .news li .img {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .news .content {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 8px;
+    }
+
+    .news .see-more {
+        margin-top: 0;
+        font-size: 1em;
+    }
+
+    .contact.contact-index input {
+        border: 0;
+    }
+
+    .contact {
+        padding: 2em 0 1em 0;
+    }
+
+    .contact h2 {
+        margin: 0 0 16px 0;
+    }
+
+    .contact input, .contact button {
+        padding: 9px 12px;
+        margin: 8px 0 0 0;
+    }
+
+    .contact input {
+        width: 100%;
+    }
+
+    .contact button {
+        width: 120px;
+    }
+
+    .sanham {
+        height: 100px;
+        font-size: 30px;
+    }
+
+    .sanham .padd {
+        font-size: 30px;
+    }
+
+    .contact-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 100vw;
+        height: 100vh;
+        padding: 25px;
+    }
+
+    .content-intro.pb-5 {
+        padding-bottom: 0rem !important;
+    }
+
+    .content-intro, .content-intro p {
+        font-size: 1.3rem;
+    }
+
+    .infor.infor-introduce {
+        padding: 0rem !important;
+        font-size: 1.3rem;
+    }
+
+    .infor.infor-introduce h2 {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .infor.infor-introduce .mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* sản phẩm chi tiết*/
+    .san-pham h2 {
+        height: 2rem !important;
+    }
+
+    .d_name {
+        height: 0rem;
+    }
+
+    .news .d_name {
+        height: auto !important;
+    }
+
+    .address span a, .d_note1 p {
+        color: #a7a7a7;
+        font-weight: normal;
+        font-family: "SVN-Athena_0";
+        font-size: 14px;
+    }
+
+    #product-container .container {
+        margin: 0 15px !important;
+        max-width: calc(100% - 30px) !important;
+    }
+
+    #product-container .heading {
+        margin: 0 15px !important;
+        max-width: calc(100% - 30px) !important;
+        margin-bottom: 50px !important;
+    }
+
+
+    h2 {
+        font-size: 1.5rem;
+        padding: 0.5em 0 0.5em 0;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    header .header {
+        margin: 0;
+    }
+
+
+
+    #banner-index {
+        font-size: 8px;
+    }
+
+    #banner-index .box {
+        padding: .5em;
+        padding-bottom: 0;
+    }
+
+    #banner-index h1, #banner-index h2 {
+        font-size: 12px;
+        margin-bottom: -0.5rem;
+    }
+
+    #banner-index h1 > span, #banner-index h2 > span {
+        color: #43782b;
+        font-size: 38px;
+    }
+
+    #banner-index .note {
+        margin-top: 4%;
+        width: 80%;
+        font-size: 14px;
+        line-height: 10px;
+        margin-bottom: 0;
+        top: 35%;
+    }
+
+    #banner-index .note p {
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        font-size: 12px;
+        line-height: 1.1;
+    }
+
+    #banner-index .content a {
+        font-size: 7px;
+        margin-top: 6em;
+    }
+
+    .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 0 2px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .slick-dots li.slick-active button, .slick-dots li button {
+        color: #fff;
+        opacity: 1;
+        border-radius: 100%;
+        border: 1.5px solid #aabc44;
+        width: 15px;
+        height: 15px;
+    }
+
+    .slick-dots li button:before {
+        width: 9px;
+        height: 9px;
+        position: absolute;
+        content: "";
+        background: #ffffff;
+        border-radius: 50%;
+        top: 100%;
+        left: 100%;
+        transform: translate(-131%, -132%);
+    }
+
+    #_spnb h2.heading {
+        padding: 1em 0 0 0;
+        font-size: 20px;
+    }
+
+    #_spnb img.imgBx1 {
+        width: 50px;
+        height: auto;
+        right: 1rem;
+        top: 0;
+    }
+
+    #_spnb .list-hotproduct {
+        margin: 0 5%;
+    }
+
+    #_spnb div.item {
+        padding: 1%;
+    }
+
+    #_spnb div.item > h3 a {
+        padding: 3px 0px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.90);
+        font-size: 14px;
+    }
+
+    #_spnb .slick-prev, #_spnb .slick-next {
+        top: 39%;
+    }
+
+    #_spnb img.imgBx {
+        width: 100px;
+        bottom: -10rem;
+    }
+
+    .introduce .heading {
+        top: 0em;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 0px;
+    }
+
+    .introduce .contentBx .title {
+        font-size: 2.5em;
+        margin-top: -50px;
+        padding: 0;
+        position: absolute;
+    }
+
+    .introduce .contentBx {
+        z-index: 19;
+        /* top: 5rem; */
+        /* transform: translateX(10%); */
+        padding-left: 0px;
+        left: 5%;
+    }
+
+    .introduce .contentBx .content {
+        margin-top: -2.5em;
+    }
+
+    .introduce .contentBx p {
+        font-size: .8rem;
+        width: 100%;
+        margin-top: 2.5em;  
+    }
+
+    .introduce .number-phone {
+        display: none;
+    }
+
+    .introduce .btn {
+        padding: .5rem 1rem;
+        font-size: 8px;
+    }
+
+
+
+    .professional-tea {
+        margin: 0;
+        position: relative;
+    }
+
+    #_nghe_nhan h2 {
+        font-size: 20px;
+        padding: 1rem;
+    }
+
+    .professional-tea .heading {
+        position: absolute;
+        top: 10px;
+        padding: 1.0em 0;
+    }
+
+    .professional-tea > .nghe-nhan {
+        margin-top: 60px;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    ._nghe_nhan {
+        height: auto !important;
+    }
+
+    #_nghe_nhan .slick-prev, #_nghe_nhan .slick-next {
+        top: 39%;
+    }
+
+    #_nghe_nhan .slick-prev {
+        left: 25px;
+    }
+
+    #_nghe_nhan .slick-next {
+        right: 25px;
+    }
+
+    #_spnb .slick-prev {
+        left: 15px;
+    }
+
+    #_spnb .slick-next {
+        right: 15px;
+    }
+
+    #_nghe_nhan div.item p {
+        margin: 0px 50px;
+        padding: 0;
+    }
+
+    #_nghe_nhan > div > img {
+        width: 100vw !important;
+    }
+
+    #_nghe_nhan {
+        height: auto;
+    }
+
+    #_nghe_nhan > div.buy-now > img {
+        width: 100vw !important;
+    }
+
+    #_nghe_nhan div.item {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    #_nghe_nhan .buy-now h2 {
+        padding: 1rem 0;
+    }
+
+
+    .buy-now input[type="text"] {
+        width: 50%;
+        border: 1px solid #aabc44;
+        padding: 0 0 1px 4px;
+        font-size: 12px !important;
+    }
+
+    #_nghe_nhan .buy-now {
+        padding-bottom: 2em;
+    }
+
+    .buy-now button.btn {
+        text-align: center;
+        background-color: #aabc44;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-left: 10px;
+        height: 30px;
+        width: 100px;
+        font-weight: bold;
+    }
+
+    #_nghe_nhan .buy-now-content {
+        padding: 0px;
+        top: 5px;
+    }
+
+    .buy-now button.px-5 {
+        padding-left: 1rem !important;
+        padding-right: 3rem !important;
+    }
+
+    .footer {
+        color: #222222;
+        height: auto;
+        background: url('../images/trang-chu/fotter-tea.png') right bottom no-repeat;
+        background-size: auto;
+    }
+
+    footer {
+        /*margin-top: 4rem;*/
+        background-color: #f1f1e7;
+    }
+
+    .footer h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer img.imgBx {
+        display: none;
+    }
+
+    .footer .imgBx {
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    .news .main-content {
+        padding: .5em;
+    }
+
+    .news li {
+        flex-wrap: wrap;
+    }
+
+    .news li img, .news li .img {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .news .content {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 8px;
+    }
+
+    .news .see-more {
+        margin-top: 0;
+        font-size: 1em;
+    }
+
+    .contact.contact-index input {
+        border: 0;
+    }
+
+    .contact {
+        padding: 2em 0 1em 0;
+    }
+
+    .contact h2 {
+        margin: 0 0 16px 0;
+    }
+
+    .contact input, .contact button {
+        padding: 9px 12px;
+        margin: 8px 0 0 0;
+    }
+
+    .contact input {
+        width: 100%;
+    }
+
+    .contact button {
+        width: 120px;
+    }
+
+    .sanham {
+        height: 100px;
+        font-size: 30px;
+    }
+
+    .sanham .padd {
+        font-size: 30px;
+    }
+
+    .contact-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 100vw;
+        height: 100vh;
+        padding: 25px;
+    }
+
+    .content-intro.pb-5 {
+        padding-bottom: 0rem !important;
+    }
+
+    .content-intro, .content-intro p {
+        font-size: 1.3rem;
+    }
+
+    .infor.infor-introduce {
+        padding: 0rem !important;
+        font-size: 1.3rem;
+    }
+    .infor.infor-introduce img{
+        width: 100%;  
+    }
+    .infor.infor-introduce h2 {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .infor.infor-introduce .mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .san-pham h2 {
+        height: 0rem !important;
+        font-size: 28px;
+    }
+
+    .d_name {
+        height: 0rem !important;
+    }
+
+    .address span a, .d_note1 p {
+        color: #a7a7a7;
+        font-weight: normal;
+        font-family: "SVN-Athena_0";
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .d_note {
+        padding-right: 15px;
+    }
+
+    .d_loai ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .d_loai ul.mt-5 {
+        margin-top: 1rem !important;
+    }
+
+    .d_loai ul li {
+        width: 50%;
+    }
+
+    .d_loai ul li label {
+        font-size: .6em;
+        color: #7a7a7a;
+    }
+
+    #sort-listproduct {
+        border: 1px solid #b2b2b2;
+        color: #6c6c6c;
+        font-size: .6em;
+    }
+
+    .d_price {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+        .d_price input {
+            font-size: 16px;
+        }
+
+    .product .mt-5.list-trademark {
+        margin-top: 1.5rem !important;
+    }
+
+    .list-product .items {
+        width: 95%;
+    }
+
+    .list-product .items a {
+        color: #000;
+        font-size: 18px;
+    }
+
+
+    .list-product .items .d_trong-luong select {
+        font-size: 18px;
+    }
+
+    .d_new {
+        margin-top: 0px;
+    }
+
+    section.contact {
+        background: url(../images/images/tin-tuc/background-tintuc.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+}

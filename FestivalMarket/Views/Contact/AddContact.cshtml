@@ -1,0 +1,107 @@
+﻿@model FestivalMarket.Models.ContactViewModel
+
+@using (Ajax.BeginForm("AddContact", "Contact", new AjaxOptions
+{
+    HttpMethod = "POST",
+    UpdateTargetId = "load_data",
+    OnComplete = "OnSuccessCO",
+    OnFailure = "OnFailureCO"
+
+}, new { @Id = "myform" }))
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="row head">
+        <div class="col-md-5 col-sm-6">
+            <div class="title">
+                <h3>CHIA SẺ CÙNG CHÚNG TÔI</h3>
+                <span></span>
+            </div>
+        </div>
+        <div class="col-md-7 col-sm-6">
+            <div class="form-tieu-de">
+                <input type="text" name="Title" id="title"  autocomplete="off" placeholder="Tiêu đề">
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-md-5 col-sm-6">
+            <div class="item">
+                <h5 class="text-white">Quý khách vui lòng nhập đầy đủ thông tin cần thiết. Chúng tôi sẽ liên hệ sớm nhất.</h5>
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="Name" id="name"  autocomplete="off" placeholder="Bạn vui lòng nhập tên">
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" name="Phone" id="phone"  autocomplete="off" placeholder="+84 123 456 789">
+                </div>
+                <div>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" name="Email" id="email"  autocomplete="off" placeholder="diachiemail@gmail.com">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 col-sm-6">
+            <div class="text-area">
+                <textarea type="text" name="Message" id="message"  autocomplete="off" placeholder="Nội dung"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-right pr-5">
+            <button class="btn bg-tim px-5 py-1 text-white" type="submit">GỬI</button>
+        </div>
+    </div>
+
+}
+@section scripts{
+    <script>
+     
+        $(document).ready(function () {
+            $('#myform').validate({
+                rules: {
+                    'title': {
+                        required: true
+                    },
+                    'name': {
+                        required: true
+                    },
+                    'phone': {
+                        required: true
+                    },
+                    'message': {
+                        required: true
+                    },
+                    'email': {
+                        required: true,
+                        email: true
+                    }
+
+                },
+                messages: {
+                    'title': '* Bạn không để trống trường này',
+                    'name': '* Bạn không để trống trường này',
+                    'phone': '* Bạn không để trống trường này',
+                    'message': '* Bạn không để trống trường này',
+                    'email': '* Bạn không để trống trường này',
+                }
+            })
+        })
+    </script>
+}
+<style>
+    .total-acount {
+        font-size: 16px;
+        color: #a6bf0b;
+        font-weight: 600;
+    }
+
+    .main_cart {
+        float: left;
+        width: calc(100%);
+        padding-left: 34px;
+    }
+</style>

@@ -1,0 +1,450 @@
+﻿@model FestivalMarket.Models.EF.News
+
+@{
+    ViewBag.Title = "Sửa thông tin tức";
+    ViewBag.Title_back = "Danh sách tin tức";
+    ViewBag.url_back = "/admins/news";
+    Layout = "~/Areas/Admins/Views/Shared/_LayoutAdmins.cshtml";
+    var stt = 0;
+}
+@{
+    var Categories = ViewBag.Categories as List<FestivalMarket.Models.EF.Category>;
+
+}
+<style>
+    .input-group-prepend, .input-group-prepend > span {
+        width: 120px !important;
+    }
+
+    .form-group label {
+        cursor: pointer;
+    }
+
+    h6 span {
+        color: #495057;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.2;
+        padding: 2rem 0rem;
+    }
+</style>
+<div class="show-table">
+    <div class="container-fluid objInfor pl-3 pr-3">
+        <div class="row mb-1 span-img objProduct">
+            <input type="hidden" name="Id" value="@Model.Id" id="ID" />
+            <div class="col-md-9 mb-1">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Mã sản phẩm</span>
+                    </div>
+                    <input type="text" name="Code" class="form-control" id="code" maxlength="80" value="@Model.Code">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Tên sản phẩm</span>
+                    </div>
+                    <input type="text" name="Title" class="form-control" id="title" value="@Model.Title" progess-value="progess1">
+                </div>
+
+
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">URL</span>
+                    </div>
+                    <input type="text" name="Slug" class="form-control" maxlength="280" id="slug" value="@Model.Slug" progess-value="progess1">
+                </div>
+                <div class="progress mt-0 mb-3">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                         data-status="low" id="progess1" role="progressbar"
+                         style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="280">
+                        <span data-progress="progess1">25%</span>
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Loại sản phẩm</span>
+                    </div>
+                    <select class="form-control" id="CID" name="CategoryId">
+                        @foreach (var item in Categories)
+                        {
+                            <option value="@item.Id" @if (Model.CategoryId == item.Id) { <text> selected</text> }>@item.Title</option>
+                        }
+                    </select>
+                </div>
+
+@*                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Loại thương hiệu</span>
+                    </div>
+                    <select class="form-control" id="TID" name="TID">
+                        @foreach (var item in TradeMark)
+                        {
+                            <option value="@item.ID" @if (Model.TID == item.ID) { <text> selected</text> }>@item.TITLE</option>
+                        }
+                    </select>
+                </div>*@
+             @*   <div class="d-flex">
+
+                    <div class="input-group res-size-21 mb-3 w-50">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Giá mới</span>
+                        </div>
+                        <input type="number" name="PRICE_NEW" id="PRICE_NEW" value="@Model.PRICE_NEW" class="form-control" />
+                    </div>
+
+                    <div class="input-group res-size-21 mb-3 w-50">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Sản Phẩm</span>
+                        </div>
+                        <select class="form-control" id="HIGHLIGHT" name="HIGHLIGHT">
+                            <option value="true" @if (Model.HIGHLIGHT == true) { <text> selected </text> }>Sản Phẩm Nổi Bật</option>
+                            <option value="false" @if (Model.HIGHLIGHT == false) { <text> selected </text> }>Sản Phẩm Bình Thường</option>
+                        </select>
+                    </div>
+                </div>*@
+
+            </div>
+            <div class="col-md-3 mb-1">
+                <h6 class="input-group-text">Ảnh đại diện</h6>
+                <input type="hidden" name="Image" value="@Model.Image" id="image" />
+                <img src="@Model.Image" class="img-size" title="Cập nhật" id="show-img" />
+            </div>
+        </div>
+
+        <div class="row mb-3 objProduct textEditor">
+            <div class="col-md-9 mb-3">
+                <div class="mb-3">
+                    <h6 class=" mb-1"><span> Mô tả sản phẩm </span></h6>
+                    <textarea name="Description" id="description" class="p-ckeditor">@Model.Description</textarea>
+                </div>
+
+                <div class="input-group mb-3 " hidden>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style="width:240px !important; z-index:99">Cụm từ khóa chính</span>
+                    </div>
+                    <input type="text" name="MAIN_KEYWORD" class="form-control" maxlength="255" id="main-keyword" style="width:calc(100% - 280px) !important; padding-left:30px;">
+                </div>
+
+                <div>
+                    <h6 class=" mb-1"><span>Nội dung chi tiết</span></h6>
+                    <textarea name="Detail" id="product-content" class="ckeditor">@Model.Detail</textarea>
+                </div>
+            </div>
+           @* <div class="col-md-3 mb-3">
+                <div class="mb-3">
+                    <button class="addImage">Thêm ảnh</button>
+                    <hr />
+                    <div class="list-img d-flex flex-wrap">
+                        @foreach (var item in images)
+                        {
+                            <div class="img">
+                                <img src="@item.IMAGE" alt="hình ảnh mô tả @Model.TITLE" />
+                                <i class="fas fa-trash-alt"></i>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+                <div class="mb-3 listMaterial">
+                    <h6 class="input-group-text">Các loại trọng lượng</h6>
+                    @Html.Partial("ListMaterialEdit")
+                </div>
+
+
+            </div>*@
+        </div>
+     @*   <div class="row mb-3 listExtendsion">
+
+        </div>*@
+        <div class="row mb-3 meta-span objProduct">
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Meta Title</span>
+                    </div>
+                    <input type="text" name="SeoTitle" value="@Model.SeoTitle" class="form-control" maxlength="80" id="seo-title" progess-value="progess2">
+                </div>
+                <div class="progress mt-0 mb-3">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                         data-status="low" id="progess2" role="progressbar"
+                         style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        <span data-progress="progess2">25%</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Meta Keyword</span>
+                    </div>
+                    <input type="text" name="SeoKeywords" value="@Model.SeoKeywords" class="form-control" maxlength="255" id="seo-keyword">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Meta Description</span>
+                    </div>
+                    <textarea id="seo-description" name="SeoDescription" value="" rows="3" maxlength="300" class="form-control textarea-resize-none" progess-value="progess3">@Model.SeoDescription</textarea>
+                </div>
+                <div class="progress mt-0 mb-3">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                         data-status="low" id="progess3" role="progressbar"
+                         style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="300">
+                        <span data-progress="progess3">25%</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold mr-2">Trạng thái </label>
+                    @if (Model.IsActive == 1)
+                    {
+                        <input type="radio" name="IsActive" id="s1" value="1" checked /><label class="ml-2 mr-5" for="s1">Hiển thị</label>
+                        <input type="radio" name="IsActive" id="s2" value="2" /><label class="ml-2" for="s2">Lưu tạm</label>
+                    }
+                    else
+                    {
+                        <input type="radio" name="IsActive" id="s1" value="1" /><label class="ml-2 mr-5" for="s1">Hiển thị</label>
+                        <input type="radio" name="IsActive" id="s2" value="2" checked /><label class="ml-2" for="s2">Lưu tạm</label>
+                    }
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!--Google review-->
+                <div class="border col-md-12 mb-2 p-2">
+                    <div id="meta-description-temp" hidden></div>
+                    <h6 class="text-primary cyan">GOOGLE CODE REVIEW</h6>
+                    <h5 class="text-primary" id="show-meta-title">@Model.SeoTitle</h5>
+                    <p class="text-success mb-1">
+                        https://festivalmarket.vn/ <span id="show-url">@Model.Slug</span>
+                    </p>
+                    <p id="show-meta-description">
+                        @Html.Raw(Model.Description)
+                    </p>
+                </div>
+                <!--/End->Google review-->
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row mb-3">
+            <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-5 modal-footer">
+                <button type="button" class="btn btn btn-red" onclick="backClick();"><i class="fas fa-reply-all"></i> Bỏ qua</button>
+                <button type="button" class="btn btn-green btnSave" onclick=""> <i class="far fa-save"></i> Ghi lại</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div hidden class="objProduct">
+    <div class="input-group res-size-21 mb-3 mr-2 w-50">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Ngày tạo</span>
+        </div>
+        <input type="date" name="CreatedDate" id="ngay-tao" value="@Model.CreatedDate" class="form-control" />
+    </div>
+    <div class="input-group res-size-21 mb-3 w-50">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Ngày sửa</span>
+        </div>
+        <input type="date" name="ModifiedDate" id="ngay-sua" value="@Model.ModifiedDate" class="form-control" />
+        @if (Model.Views == null)
+        {
+            <input type="text" name="Views" id="VIEWS" value="0" />
+        }
+        else
+        {
+            <input type="text" name="Views" id="VIEWS" value="@Model.Views" />
+        }
+
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Content/ckfinder/ckfinder.js"></script>
+    <script>
+
+        function backClick() {
+            location.href = "/admins/news";
+        }
+        $(document).ready(function () {
+            CKEDITOR.replace('description', {
+                toolbar: [
+                    { name: 'basicstyles', items: ['Bold', 'Italic',] },
+                    { name: 'styles', items: ['Styles', 'Format'] },
+                    { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi'], items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl'] },
+                    { name: 'links', items: ['Link', 'Unlink', 'Anchor'] },
+                    { name: 'tools', items: ['Maximize', 'ShowBlocks'] }
+                ],
+                height: 80
+            });
+            CKEDITOR.replace('product-content', {
+                toolbar: [
+                    { name: 'basicstyles', items: ['Bold', 'Italic',] },
+                    { name: 'styles', items: ['Styles', 'Format'] },
+                    { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi'], items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl'] },
+                    { name: 'links', items: ['Link', 'Unlink', 'Anchor'] },
+                    { name: 'tools', items: ['Maximize', 'ShowBlocks'] }
+                ],
+                height: 100
+            });
+            addData();
+        });
+        function addData() {
+            $(document).on('click', '.btnSave', function () {
+                let product = new Object();
+           
+
+               
+                $('.objProduct input[type="text"],.objProduct input[type="number"], .objProduct input[type="hidden"], .objProduct input[type="date"]').each(function () {
+                    product[$(this).attr('name')] = $(this).val();
+                });
+                $('.objProduct select').each(function () {
+                    product[$(this).attr('name')] = $(this).val();
+                });
+                $('.textEditor textarea').each(function () {
+                    let id = $(this).attr('id');
+                    product[$(this).attr('name')] = CKEDITOR.instances[id].getData();
+                });
+             
+         
+                $(' input[name="IsActive"]:checked').each(function () {
+                    product.IsActive = $(this).val();
+                });
+                $('.list-img img').each(function () {
+                    let img = new Object();
+                    img.Image = $(this).attr('src');
+                    images.push(img);
+                })
+                product.SeoDescription = $('textarea[name="SeoDescription"]').val();
+                console.log(product);
+
+                $.ajax({
+                    url: '/Admins/News/AddOrUpdate',
+                    type: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        news: product,
+                        
+                    }),
+                    beforeSend: function () {
+
+                    },
+                    success: function (res) {
+                        let id = $('#ID').val();
+                        if (id == 0) {
+                            msg0 = "Thêm mới dữ liệu thành công.";
+                            msg1 = "Đã xảy ra lỗi khi thêm mới dữ liệu";
+                        } else {
+                            msg0 = 'Sửa đổi dữ liệu thành công';
+                            msg1 = 'Đã xảy ra lỗi khi sửa đổi dữ liệu';
+                        }
+                        if (res != 0) {
+                            swal({
+                                title: "Thông báo",
+                                text: msg0,
+                                icon: "success",
+                                dangerMode: true,
+                            }).then(() => {
+
+                            });
+                        } else {
+                            swal({
+                                title: "Thông báo",
+                                text: msg1,
+                                icon: "warning",
+                                dangerMode: true,
+                            });
+                        }
+                        console.log(res);
+                    },
+                    error: function () {
+
+                    },
+                    complete: function () {
+
+                    }
+                })
+            });
+        }
+        function addImage() {
+            $('.addImage').click(function () {
+                let finder = new CKFinder();
+                finder.selectActionFunction = function (fileUrl) {
+                    let row = `<div class="img">
+                                                <img src="${fileUrl}" alt="hình ảnh mô tả sản phẩm" />
+                                                <i class="fas fa-trash-alt"></i>
+                                            </div>`;
+                    $('.list-img').append(row);
+                };
+                finder.popup();
+            });
+            $(document).on('click', '.list-img img', function () {
+                let finder = new CKFinder();
+                let img = this;
+                finder.selectActionFunction = function (fileUrl) {
+                    console.log(img);
+                    $(img).attr('src', fileUrl);
+                };
+                finder.popup();
+            })
+        }
+        addImage();
+        ChooseImage();
+        deleteImage();
+        function ChooseImage() {
+            $('#show-img').click(function () {
+                let finder = new CKFinder();
+                let img = this;
+                finder.selectActionFunction = function (fileUrl) {
+                    console.log(fileUrl);
+                    $(img).attr('src', fileUrl);
+                    $('#image').val(fileUrl);
+                };
+                finder.popup();
+            });
+        }
+        function deleteImage() {
+            $(document).on('click', '.list-img .img i', function () {
+                $(this).parent('.img').remove();
+            })
+        }
+    </script>
+    <script src="~/Scripts/common.js"></script>
+    <script src="~/Scripts/checkSeo.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#title').bind("change keyup", function () {
+                let val = $(this).val();
+                $('#slug').val(titleChange(val));
+                $('#show-url').text(titleChange(val));
+                $('#seo-title').val(val.trim());
+                $('#show-meta-title').text(val.trim());
+                selectSEO('seo-title', 'show-meta-title', 100);
+                selectSEO('slug', 'show-url', 100);
+            });
+            $('#seo-title').bind("change keyup", function () {
+                let val = $(this).val();
+                $('#show-meta-title').text(val);
+            });
+
+            CKEDITOR.instances['description'].on('change', function () {
+                let val = CKEDITOR.instances["description"].getData();
+                $('#meta-description-temp').html(val);
+
+                $("#seo-description").val($('#meta-description-temp').text());
+                $("#show-meta-description").html(val);
+                selectSEO('seo-description', 'show-meta-description', 300);
+            });
+            $("#seo-description").bind("change keyup", function () {
+                let val = $(this).val();
+                selectSEO('seo-description', 'show-meta-description', 300);
+                $("#show-meta-description").text(val);
+            });
+            let id = "product-content";
+            checkSeo.checkSeoAction(id);
+            checkSeo.checkSeo(id);
+        });
+    </script>
+
+}

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.Category>
+
+@if (Model != null && Model.Any())
+{
+    <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="/tin-tuc">Mới nhất</a>
+        @foreach (var item in Model)
+        {
+            
+                <a class="dropdown-item" href="/tin-tuc/@item.Id">@item.Title</a>
+           
+
+        }
+     
+    </div>
+}

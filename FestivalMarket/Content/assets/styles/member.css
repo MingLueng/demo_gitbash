@@ -1,0 +1,37 @@
+
+.banner .carousel-control-prev-icon {
+    background-image: url("/Content/assets/images/festivalmarket/left.png") !important;
+    width: 2rem;
+    height: 2rem;
+}
+.banner .carousel-control-next-icon {
+    background-image: url("/Content/assets/images/festivalmarket/right.png") !important;
+    width: 2rem;
+    height: 2rem;
+}
+.member-one, .member-two,.member-three{
+    padding-top: 5.5rem;
+}
+.member-one h2.title{
+    color: #fff;
+}
+.member-one .title-one{
+    border-top-right-radius: 8rem;
+    border-top-left-radius: 8rem;
+    padding: 1rem 0 0rem;
+    width: 42%;
+}
+.items-list .items{
+ padding: 0 0.25rem !important;
+ margin-bottom: 0.5rem;
+}
+.member-three .title-three {
+    background-image: url("/Content/assets/images/hr.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+.three-content{
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}

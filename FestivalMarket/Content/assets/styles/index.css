@@ -1,0 +1,609 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    font-family: SVN-Athena_0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h2.heading {
+    font-size: 1.8rem;
+}
+
+#banner-index {
+    font-size: 1rem;
+}
+
+    #banner-index h2 {
+        font-size: 1em;
+    }
+
+    #banner-index .sub-title {
+        font-size: 3.5em;
+        color: #43782b;
+        font-family: 'SVN-Artful Beauty';
+        font-weight: normal;
+        margin-top: .5em;
+    }
+
+    #banner-index .note {
+        width: 80%;
+        height: 80px;
+        margin-top: -2em;
+    }
+
+
+.btn-custom-01 {
+    display: inline-block;
+    padding: .4em 1.8em;
+    background: #aabc44;
+    color: #000;
+    font-size: .9em;
+    margin-left: 0;
+    text-decoration: none;
+    border: none;
+}
+
+#banner-index .slick-dotted.slick-slider {
+    margin: 0;
+}
+
+#banner-index .banner-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3em 0;
+}
+
+#banner-index .banner-caption {
+    padding: 0 2em;
+}
+
+#banner-index .slick-dots {
+    bottom: 2px;
+}
+
+.slick-dots li.slick-active button, .slick-dots li button {
+    color: #fff;
+    opacity: 1;
+    border-radius: 100%;
+    border: 1.5px solid #aabc44;
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+    .slick-dots li button:before {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        content: "";
+        background: #ffffff;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .slick-dots li.slick-active button:before {
+        background: #aabc44;
+    }
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px;
+    padding: 0;
+    cursor: pointer;
+}
+
+#banner-index .banner .slick-next {
+    right: 8px;
+}
+
+#banner-index .banner .slick-prev {
+    left: 4px;
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 9;
+}
+
+.banner .slick-arrow:before {
+    color: #aabc44;
+    font-size: 24px;
+}
+
+#_spnb {
+    background: #fff;
+    padding: 2em 0 0 0;
+}
+
+    #_spnb h2.heading {
+        margin-bottom: 1em;
+    }
+
+    #_spnb .product-slick {
+        margin: 0 2em;
+    }
+
+    #_spnb .rounded-circle {
+        border: 1px solid #e7e7e7;
+    }
+
+    #_spnb div.item > img {
+        width: 100%;
+    }
+
+    #_spnb div.item > h3 {
+        text-align: center;
+    }
+
+        #_spnb div.item > h3 a {
+            display: block;
+            text-transform: uppercase;
+            padding: 10px 0px;
+            text-align: center;
+            color: #000000;
+            font-size: 18px;
+        }
+
+    #_spnb .slick-prev, #_spnb .slick-next {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 41%;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    #_spnb img.imgBx {
+        width: 4em;
+        left: 0;
+        bottom: -4em;
+        z-index: 1;
+    }
+
+    #_spnb img.imgBx1 {
+        width: 2em;
+        height: auto;
+        right: 1em;
+        top: 0;
+    }
+
+#_intro {
+    background: #fff url(/Content/images/trang-chu/gioithieu.png) center no-repeat;
+    background-size: cover;
+    padding: 3em 0;
+}
+
+.introduce h2.heading {
+    margin-bottom: 1em;
+}
+
+.introduce .contentBx .title {
+    font-size: 3em;
+    color: #43782b;
+    font-family: 'SVN-Artful Beauty';
+    font-weight: normal;
+}
+
+.introduce .contentBx .content {
+    margin-top: -1em;
+    width: 60%;
+    text-align: justify;
+}
+
+.introduce .number-phone {
+    bottom: 1em;
+    right: 1em;
+}
+
+    .introduce .number-phone img {
+        width: 12em;
+    }
+
+    .introduce .number-phone h3 {
+        left: calc( 50% + 1em);
+        top: 50%;
+        color: #aabc44;
+        transform: translate(-50%, -70%);
+    }
+
+        .introduce .number-phone h3 a {
+            color: #aabc44;
+        }
+
+._nghe_nhan {
+    width: 100%;
+    overflow: hidden;
+}
+
+#_nghe_nhan {
+    width: 100%;
+    overflow: hidden;
+    padding: 2em 0;
+    background: #fff;
+}
+
+    #_nghe_nhan .slick-prev {
+        left: 20px;
+    }
+
+    #_nghe_nhan .slick-next {
+        right: 20px;
+    }
+
+    #_nghe_nhan h2 {
+        margin-bottom: 1em;
+    }
+
+    #_nghe_nhan div.item p {
+        font-size: 14px !important;
+        font-weight: normal;
+        padding: 0 1rem;
+    }
+
+    #_nghe_nhan > div > img.imgBx {
+        bottom: 0;
+        width: 100%;
+    }
+
+    #_nghe_nhan .imgBx {
+        width: 10em;
+        bottom: 0;
+    }
+
+.professional h2 {
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-size: 3rem;
+}
+
+.professional-tea {
+    margin: 0 16.666667%;
+    position: absolute;
+    top: 0;
+    padding-top: 5%;
+}
+
+#_nghe_nhan .professional-tea .item img {
+    height: auto;
+    width: 100%;
+    margin: 12.5px;
+}
+
+#_nghe_nhan div.item {
+    width: 20%;
+}
+
+
+#_nghe_nhan .item h3 {
+    font-size: 1.2rem;
+}
+
+.buy-now h2 {
+    margin-bottom: 1em;
+}
+
+.buy-now input[type="text"] {
+    width: 45%;
+    border: 2px solid #aabc44;
+    padding: 0 1em;
+}
+
+    .buy-now input[type="text"]:focus {
+        outline: none;
+    }
+
+    .buy-now input[type="text"]::placeholder {
+        color: #000;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+.buy-now .img {
+    padding: 2em 2em 3em 2em;
+}
+
+.buy-now .img-abs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5em;
+}
+
+.buy-now-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2em;
+}
+
+@media only screen and (max-width:420px) {
+    #_nghe_nhan div.item p {
+        font-size: 14px !important;
+        font-weight: normal;
+        padding: 0 5rem;
+    }
+
+    .buy-now input[type="text"]::placeholder {
+        color: #000;
+        font-weight: 600;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    #banner-index .banner-item {
+        padding: 5em 2em;
+    }
+
+    #banner-index .note {
+        width: 50%;
+        height: 80px;
+    }
+
+    #_spnb {
+        padding: 3em 0 1em 0;
+    }
+
+        #_spnb h2.heading {
+            margin-bottom: 1em;
+        }
+
+        #_spnb img.imgBx {
+            width: 5em;
+            bottom: -6em;
+        }
+
+    #_intro {
+        height: 55vw;
+        display: flex;
+        align-items: center;
+        padding: 0 6em;
+    }
+
+    .introduce .number-phone {
+        bottom: 3em;
+        right: 4em;
+    }
+
+    .introduce h2.heading {
+        margin-bottom: 2em;
+    }
+
+    .introduce .contentBx .content {
+        width: 50%;
+    }
+
+    .introduce .contentBx .title {
+        font-size: 4em;
+    }
+
+    #_nghe_nhan {
+        padding: 0 0 5em 0;
+    }
+
+        #_nghe_nhan .slick-prev {
+            left: -15px;
+        }
+
+        #_nghe_nhan .slick-next {
+            right: -15xp;
+        }
+
+    .buy-now .img-abs {
+        width: 10em;
+    }
+
+    .buy-now .img {
+        padding: 2em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    html {
+        font-size: 16px;
+    }
+
+    #banner-index h2 {
+        font-size: 1.5em;
+    }
+
+    #banner-index .banner-item {
+        padding: 6em 3em;
+    }
+
+    #banner-index .note {
+        width: 40%;
+        margin-top: -2.5em;
+    }
+
+    #_spnb {
+        padding: 5em 0 0 0;
+    }
+
+        #_spnb h2.heading {
+            margin-bottom: 2em;
+        }
+
+        #_spnb img.imgBx {
+            width: 5em;
+            bottom: -8em;
+        }
+
+        #_spnb img.imgBx1 {
+            width: 4em;
+        }
+
+    #_intro {
+        height: 55vw;
+        display: flex;
+        align-items: center;
+        padding: 0 6em;
+    }
+
+    .introduce h2.heading {
+        margin-bottom: 3em;
+    }
+
+    .introduce .number-phone {
+        top: 13vw;
+        bottom: auto;
+        right: 2em;
+    }
+
+    .buy-now .img {
+        padding: 4em 6em 0 6em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    html {
+        font-size: 17px;
+    }
+
+    h2.heading {
+        font-size: 2rem;
+    }
+
+    #banner-index h2 {
+        font-size: 2em;
+    }
+
+    #banner-index .banner-item {
+        height: calc(100vh - 80px);
+        padding: 10em;
+    }
+
+    #banner-index .note {
+        width: 35%;
+        margin-top: -3em;
+    }
+
+    .btn-custom-01 {
+        font-size: 20px;
+    }
+
+    #_spnb {
+        display: flex;
+        align-items: center;
+        overflow: unset;
+        margin-bottom: -2em;
+        z-index: 1;
+        background: transparent;
+    }
+
+        #_spnb img.imgBx {
+            bottom: -12em;
+            width: 8em;
+            z-index: 99;
+        }
+
+        #_spnb img.imgBx1 {
+            top: 0;
+            right: 50%;
+            transform: translateX(600px)
+        }
+
+        #_spnb h2.heading {
+            margin-bottom: 2em;
+        }
+
+    #_intro {
+        height: 55vw;
+        display: flex;
+        align-items: center;
+    }
+
+    .introduce h2.heading {
+        margin-bottom: 4em;
+    }
+
+    .introduce .contentBx .title {
+        font-size: 8em;
+    }
+
+    .introduce .contentBx .content {
+        width: 45%;
+        margin-top: -3em;
+    }
+
+    .introduce .number-phone {
+        right: 3em;
+        top: 25%;
+    }
+
+        .introduce .number-phone img {
+            width: 14em;
+        }
+
+    .introduce .contentBx {
+        padding-left: 4em;
+    }
+
+    .buy-now h2 {
+        margin-bottom: 2em;
+    }
+
+    .buy-now .btn-custom-01 {
+        width: 8em;
+    }
+
+    .buy-now .img {
+        padding: 4em 10em 2em 10em;
+    }
+
+    .buy-now .img-abs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15em;
+    }
+
+    #_nghe_nhan .imgBx {
+        width: 12em;
+        bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #_nghe_nhan .imgBx {
+        width: 15em;
+    }
+}

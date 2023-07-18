@@ -1,0 +1,31 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.FilmsView>
+
+
+<div class="noi-bat">
+    <h2 class="bg-tim text-center">
+        Bài Viết Mới
+    </h2>
+
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            <div class="img">
+                <img src="@item.Image" alt="">
+            </div>
+            <h6 class="font-13 color-tim" style="padding-left: 25px; padding-top: 8px;">@item.CategoryFilm.Title </h6>
+            <div class="content">
+                <h5><a style="text-decoration: none; color: #9e0b0b; font-size: 18px;" href="/chi-tiet-films/@item.Slug-@item.Id">@item.Title</a></h5>
+                <p>
+                    @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))
+                </p>
+                <p>
+                    <a style="text-decoration:none" href="/chi-tiet-films/@item.Slug-@item.Id">Xem chi tiết >></a>
+                </p>
+            </div>
+        </div>
+    }
+
+</div>
+
+
+

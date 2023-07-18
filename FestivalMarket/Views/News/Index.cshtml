@@ -1,0 +1,38 @@
+﻿
+
+
+    <section class="content-page">
+        <div class="news-content-page pt-3">
+            <div class="news px-57 pt-5 pb-4">
+                <h2 class="font-33 color-tim">
+                    TIN TỨC
+
+                </h2>
+            </div>
+            @Html.Action("MenuArrival", "Menu")
+        </div>
+        <div class="content-cate">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="#" role="tabpanel" aria-labelledby="#">
+                    <div class="news-update px-57">
+                        <div class="p-4 border-3-tim">
+                            <div class="row content-news-cate">
+
+                                @Html.Action("Partial_News", "News")
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-news px-57 pt-3">
+            <div class="row">
+                @Html.Action("Partial_ShowNews", "News")
+                @Html.Action("Partial_ViewNews", "News")
+
+
+            </div>
+        </div>
+    </section>
+

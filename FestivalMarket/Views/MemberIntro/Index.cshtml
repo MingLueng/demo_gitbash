@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/assets/styles/member.css">
+
+<section class="content-page">
+    <div class="banner">
+
+        @Html.Action("GetMemberIntro", "MemberIntro")
+    </div>
+
+    <!-- member 2 -->
+    <div class="member-one">
+        <div class="d-flex mx-auto bg-tim title-one ">
+            <h2 class="title text-center w-100 font-33">
+                CHƯƠNG TRÌNH THÀNH VIÊN
+            </h2>
+        </div>
+        <div class="px-57">
+            <div>
+                <img src="~/Content/assets/images/festivalmarket/chuong-trinh.png" class="w-100" alt="mem">
+            </div>
+        </div>
+    </div>
+
+    <div class="member-two px-57">
+        <div class="row">
+            <div class="col-6 items items-first">
+                <div class="image">
+                    <img style="min-height: 50rem;" src="~/Content/assets/images/festivalmarket/banner.png" class="w-100" alt="item">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row items-list">
+                    <div class="col-6 items">
+                        <div class="image">
+                            <img src="~/Content/assets/images/festivalmarket/banner.png" class="w-100" alt="item">
+                        </div>
+                    </div>
+                    <div class="col-6 items">
+                        <div class="image">
+                            <img src="~/Content/assets/images/festivalmarket/banner.png" class="w-100" alt="item">
+                        </div>
+                    </div>
+                    <div class="col-6 items mb-0">
+                        <div class="image">
+                            <img src="~/Content/assets/images/festivalmarket/banner.png" class="w-100" alt="item">
+                        </div>
+                    </div>
+                    <div class="col-6 items mb-0">
+                        <div class="image">
+                            <img src="~/Content/assets/images/festivalmarket/banner.png" class="w-100" alt="item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="member-three">
+        <div class=" title-three">
+            <h2 class="title text-center w-100 color-tim font-33">
+                THỂ LỆ CHƯƠNG TRÌNH THẺ THÀNH VIÊN
+            </h2>
+        </div>
+        <div class="px-57 three-content">
+            <div>
+                <p class="font-30 mb-0 text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida.
+                    Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus aperiam at doloribus voluptas tenetur id ipsam,
+                    aliquam laborum rem enim veniam, modi cumque illum quia
+                    laboriosam. Sint modi quos aliquid!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus aperiam at doloribus voluptas tenetur id ipsam,
+                    aliquam laborum rem enim veniam, modi cumque illum quia
+                    laboriosam. Sint modi quos aliquid!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus aperiam at doloribus voluptas tenetur id ipsam,
+                    aliquam laborum rem enim veniam, modi cumque illum quia
+                    laboriosam. Sint modi quos aliquid!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+

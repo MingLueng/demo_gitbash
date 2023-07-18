@@ -1,0 +1,54 @@
+﻿
+.bg-uddb {
+    background-image: url(/Content/assets/images/festivalmarket/bg-uddb.png);
+}
+
+.member-one .title-uddb {
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    padding: 1rem 0 0rem;
+    width: 42%;
+}
+
+.member-one.hr {
+    border-bottom: 1rem solid #8c2878;
+}
+
+.member-two {
+    padding-bottom: 5.5rem;
+}
+
+.color-title {
+    color: #8c2878;
+}
+
+.autoplay .item {
+    margin: 1rem;
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid #ffd9be;
+    background: #ffd9be;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.autoplay {
+    display: flex;
+    justify-content: center;
+}
+
+.banner {
+    position: relative;
+}
+
+.content-banner {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+    .content-banner h3 {
+        color: red;
+    }

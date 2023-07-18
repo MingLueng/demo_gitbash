@@ -1,0 +1,72 @@
+﻿@model FestivalMarket.Models.EF.Product
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/assets/styles/festival-go.css">
+
+@{
+    var lstPro = ViewBag.lstNewPro as FestivalMarket.Models.EF.Product;
+}
+<section class="content-page" style="margin-top: -2rem;">
+    <div class="banner">
+        <div class="img">
+            <img src="@lstPro.Image" alt="" class="w-100" />
+        </div>
+        <div class="container content-banner px-57">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="">
+                        <h3><a style="text-decoration: none"href="/chi-tiet-products/@lstPro.Slug-@lstPro.Id">@lstPro.Title</a></h3>
+                        <p>
+                            @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(lstPro.Description))
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- member 2 -->
+    <div class="member-one">
+        <div class="d-flex mx-auto">
+            <h2 class="color-title text-center w-100 font-33">
+                SẢN PHẨM NỔI BẬT
+            </h2>
+        </div>
+        <div class="home-event px-57 py-3">
+            <div class="list-slide w-lg-90 px-57 mx-auto">
+                <div class="slide-three p-3">
+                    @Html.Action("Partial_ViewPro", "Product");
+                </div>
+            </div>
+           
+        </div>
+       
+    </div>
+    <!-- member 2 -->
+    <div class="member-one hr">
+        <div class="d-flex mx-auto bg-tim title-uddb ">
+            <h2 class="title text-center w-100 font-33">
+                ƯU ĐÃI ĐẶC BIỆT
+            </h2>
+        </div>
+    </div>
+   
+    <div class="member-two px-57 bg-uddb">
+        @Html.Action("GetNewsHot", "Product")
+    </div>
+</section>
+
+@section scripts{
+    <script>
+        $('.slide-three').slick({
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+        });
+    </script>
+}

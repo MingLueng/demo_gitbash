@@ -1,0 +1,25 @@
+﻿
+@{
+    var newsview = ViewBag.TinMoi as List<FestivalMarket.Models.EF.News>;
+
+}
+@if (newsview != null && newsview.Any())
+{
+    foreach (var item in newsview)
+    {
+        <div class="col-12 col-lg-6">
+            <div class="image-news">
+                <img class="w-100" src="@item.Image" alt="news">
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="title-news">
+                <h6 class="font-13 color-tim">@item.Alias</h6>
+                <h3 class="font-20 color-red"><a style="text-decoration:none" href="/chi-tiet/@item.Slug-@item.Id">@item.Title</a></h3>
+                <p class="font-13">
+                    @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))
+                </p>
+        </div>
+</div>
+    }
+}

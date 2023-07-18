@@ -1,0 +1,24 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.Category>
+
+@if (Model != null && Model.Any())
+{
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link" id="#" href="/tin-tuc" role="tab" aria-controls="nav-home" aria-selected="false">Mới nhất</a>
+            @foreach (var item in Model)
+            {
+
+                if (ViewBag.CateId == item.Id)
+                {
+                    <a class="nav-item nav-link active " id="#" href="/tin-tuc/@item.Id" role="tab" aria-controls="nav-profile" aria-selected="true">@item.Title</a>
+                }
+                else 
+                {
+                    <a class="nav-item nav-link " id="#" href="/tin-tuc/@item.Id" role="tab" aria-controls="nav-profile" aria-selected="false">@item.Title</a>
+                }
+
+
+            }
+        </div>
+    </nav>
+}

@@ -1,0 +1,67 @@
+﻿@model FestivalMarket.Models.EF.News
+@{
+    ViewBag.Title = "DetailNews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var proimages = ViewBag.prodetails as FestivalMarket.Models.EF.News;
+}
+@section metaTags{
+    <meta name="keywords" content=" @Html.Raw(proimages.SeoKeywords)" />
+    <meta name="keywords" content=" @Html.Raw(proimages.MAIN_KEYWORD)" />
+    <meta name="description" content="@Html.Raw(proimages.SeoDescription)" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@Html.Raw(proimages.SeoTitle)" />
+    <meta property="og:description" content="@Html.Raw(proimages.SeoDescription)" />
+    <meta property="og:url" content="https://festivalmarket.vn/" />
+    <meta property="og:site_name" content="Wine Viet Y" />
+    <meta property="og:image" content="@proimages.Image" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="@Html.Raw(proimages.SeoDescription)" />
+    <meta name="twitter:title" content="@Html.Raw(proimages.SeoTitle) " />
+    <meta property="article:tag" content="@Html.Raw(proimages.SeoKeywords)" />
+    <meta property="article:section" content="Tin tức" />
+    <meta property="article:published_time" content="@proimages.CreatedDate" />
+    <meta property="article:modified_time" content="@proimages.ModifiedDate" />
+}
+<section class="content-page">
+    <div class="container-fluid px-57 khuyen-mai">
+        <div class="address mb-3 mt-3">
+            <span><a href="/trang-chu"> Trang Chủ </a></span>
+            <span> &gt; </span>
+            <pan> <a href="/Tin-tuc">Tin tức</a>
+        </div>
+
+        <br>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <div class="km-first">
+                    <div class="title-post">
+                        <h1 style="font-size: 2.5rem; color: #899a29;">@proimages.Title</h1>
+                    </div>
+                    <br>
+                    <div class="content" style="font-style: italic;font-family: 'FontsFree-Net-calibri-regular'; font-size: 18px; font-weight: 300; color: #000000; ">
+                        @Html.Raw(proimages.Detail)
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                @Html.Action("Partial_NewId", "News")
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="height-100"></div>
+</section>
+

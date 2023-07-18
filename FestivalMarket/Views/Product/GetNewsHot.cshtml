@@ -1,0 +1,30 @@
+﻿
+
+@{
+    var proimages = ViewBag.lstNewsPro as FestivalMarket.Models.EF.Product;
+}
+<section class="content-page">
+    <div class="container-fluid px-57 su-kien">
+        <div class="row">
+            @if (proimages != null)
+            {
+                <div class="col-6 items items-first h-100">
+
+                    <div class="image">
+                        <img src="@proimages.Image" class="w-100 " alt="item">
+                    </div>
+                    <div style="font-size: 22px; color: #899a29; "><a style="text-decoration: none"href="/chi-tiet-products/@proimages.Slug-@proimages.Id">@proimages.Title</a></div>
+                    <div style="font-size: 18px; color: #ff6a00;"> @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(proimages.Description))</div>
+                </div>
+            }
+
+            <div class="col-6">
+                @Html.Action("Partial_HotPro", "Product")
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+

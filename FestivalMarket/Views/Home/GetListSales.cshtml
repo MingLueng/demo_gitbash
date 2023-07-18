@@ -1,0 +1,17 @@
+﻿
+@{
+    var proimages = ViewBag.ListSales as FestivalMarket.Models.EF.Sales;
+}
+@if (proimages != null)
+{
+    <div class="col-12">
+        <div class="km-item km-item-lg mb-4">
+            <div class="km-img">
+                <img class="w-100" src="@proimages.Image" alt="KM">
+            </div>
+            <div class="km-comtent py-4 px-3">
+                <h4 class="mb-0 font-20"> <a style="text-decoration: none"href="/chi-tiet-sales/@proimages.Slug-@proimages.Id">@proimages.Title</a></h4>
+            </div>
+        </div>
+    </div>
+        }

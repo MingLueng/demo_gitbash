@@ -1,0 +1,33 @@
+﻿@*@model PagedList.PagedList<FestivalMarket.Models.EF.News>
+@using PagedList.Mvc;
+@using PagedList;*@
+@{
+    var newsview = ViewBag.NewsView as IEnumerable<FestivalMarket.Models.EF.News>;
+}
+<div class="col-12 col-lg-4 left-news">
+    <div class="hot-news">
+        <div class="title-hot-news d-flex justify-content-center">
+            <h2 class="font-20 bg-tim color-wh text-center">XEM NHIỀU NHẤT</h2>
+        </div>
+    </div>
+    <div class="px-3 pt-lg-4">
+        @if (newsview != null && newsview.Any())
+        {
+            foreach (var item in newsview)
+            {
+                <div class="row item-news-list">
+                    <div class="col-12 col-lg-6 items-news-update">
+                        <div class="image-news">
+                            <img class="w-100" src="@item.Image" alt="news">
+                        </div>
+                    </div>
+                    <div class="title-news col-12 col-lg-6 p-lg-0">
+                        <h6 class="font-10 color-tim mb-0"><a style="text-decoration:none" href="/chi-tiet/@item.Slug-@item.Id">@item.Title</a></h6>
+                        <h3 class="font-10 color-red mb-0">@Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))</h3>
+
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,168 @@
+﻿@model FestivalMarket.Models.EF.News
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="banner" style="margin-top: -2rem; margin-bottom: 2rem;">
+    @Html.Action("GetBanner", "Home")
+</section>
+
+<!-- content -->
+<section class="content-page px-57">
+    <div class="title-hot-news d-flex justify-content-center border-0">
+        <h2 class="font-33 bg-tim color-wh text-center">ĐANG DIỄN RA</h2>
+    </div>
+    <div class="home container-fluid">
+        <div class="row w-lg-90 mx-auto">
+            <div class="col-md-6 col-xs-12">
+                <div class="item">
+                    <img src="~/Content/assets/images/festivalmarket/dang-dien-ra-0.png" alt="dang-dien-ra" class="w-100">
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="item">
+                    <div>
+                        <img src="~/Content/assets/images/festivalmarket/dang-dien-ra-1.png" alt="" class="w-100">
+                    </div>
+                    <div>
+                        <img src="~/Content/assets/images/festivalmarket/dang-dien-ra-1.png" alt="" class="w-100">
+                    </div>
+                    <div>
+                        <img src="~/Content/assets/images/festivalmarket/dang-dien-ra-1.png" alt="" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<div class="home-content">
+    <div class="home-event px-57 py-3">
+        <div class="list-slide w-lg-90 px-57 mx-auto">
+            <div class="slide-three p-3">
+                @Html.Action("GetListEvents", "Home")
+                @*  <div class="news-btn px-lg-4 w-lg-90">
+                        <div class="d-flex justify-content-right">
+                            <button class="btn-more bg-tim color-wh px-4 py-2">Xem thêm</button>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="home-week px-57">
+        <div class="row w-lg-90 mx-auto">
+            <div class="col-12 col-lg-8">
+                <div class="hot-news">
+                    <div class="title-hot-news d-flex justify-content-center">
+                        <h2 class="font-33 bg-tim color-wh text-center">LỊCH CHIẾU PHIM</h2>
+                    </div>
+                </div>
+                <div class="w-lg-33 d-flex mx-auto py-3  justify-content-center">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active font-20" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Tuần này</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-20" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Tuần sau</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content py-3" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                        @Html.Action("GetListFilms", "Home")
+
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 px-lg-3">
+                <div class="hot-news">
+                    <div class="title-hot-news d-flex justify-content-center">
+                        <h2 class="font-33 bg-tim color-wh text-center">TIN TỨC</h2>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <div class="list-news-home">
+                        @Html.Action("GetListNews", "Home")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-festival position-relative">
+
+        <div class="fes-title">
+            <h2 class="font-33 text-center color-wh mb-4">ĐẾN VỚI FESTIVAL MARKET</h2>
+            <h4 class="font-20 text-center color-wh mb-4">ĐỂ TRẢI NGHIỆM</h4>
+            <h2 class="font-33 text-center color-wh">KHÔNG GIAN VĂN HÓA DU LỊCH</h2>
+        </div>
+        <div class="px-57 item-fest">
+            <div class="row w-lg-90 mx-auto">
+                @Html.Action("Partial_ItemCateId", "Product")
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="home-km">
+        <div class="hot-news">
+            <div class="title-hot-news d-flex justify-content-center border-0">
+                <h2 class="font-33 bg-tim color-wh text-center">KHUYẾN MÃI</h2>
+            </div>
+        </div>
+        <div class="home-km-detail py-5 px-57 d-flex mx-auto">
+            <div class="w-lg-75 mx-auto">
+                <div class="row">
+
+                    @Html.Action("GetListSales", "Home")
+
+
+                    @Html.Action("GetListSalesOfViews", "Home")
+                    @*   <div class="col-12">
+                            <div class="d-flex justify-content-center mb-3 mt-3">
+                                <button class="btn-more bg-tim color-wh px-4 py-2">Xem thêm</button>
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-fes-go px-57 mt-4">
+
+        <div class="hot-news">
+            <div class="title-hot-news d-flex justify-content-center border-0">
+                <h2 class="font-33 bg-tim color-wh text-center">FESTIVAL GO</h2>
+            </div>
+        </div>
+        <div class=" bg-hong-phan py-3 py-lg-5 fes-go-detail">
+            <div class="w-lg-90 mx-auto py-4  ">
+                <div class="row item-go-fes">
+                    <div class="col-12 col-lg-6">
+                        @Html.Action("GetListProduct", "Home")
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        @Html.Action("GetListProductOfViews", "Home")
+                    </div>
+                    @*<div class="col-12 pt-0 pt-lg-4">
+                            <div class="d-flex justify-content-center mt-3 mt-lg-0">
+                                <button class="btn-more bg-tim color-wh px-4 py-2">XEM THÊM</button>
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+
+}

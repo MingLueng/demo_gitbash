@@ -1,0 +1,19 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.Product>
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <div class="row item-level">
+            <div class="col-12 col-lg-6 my-4">
+                <div class="img-fes-go">
+                    <img class="w-100" src="@item.Image" alt="img">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 my-4 pt-3">
+          @*<h6 class="color-tim font-13 pl-2">Lorem </h6>*@
+                <h4 class="color-red font-25 pl-2"><a style="text-decoration: none" href="/chi-tiet-products/@item.Slug-@item.Id">@item.Title</a></h4>
+                <p class="font-20 pl-2"> @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))</p>
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,100 @@
+..news-content-page {
+    background-image: url("/Content/assets/images/festivalmarket/bg-tintuc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.news-content-page .nav-tabs {
+    padding: 0 4.5rem;
+    border-bottom: 1px solid #ccc;
+}
+    /* .news-content-page #nav-tab{
+    border-bottom: none;
+} */
+    .news-content-page .nav-tabs .nav-link.active,
+    .news-content-page .nav-tabs .nav-link.active:hover {
+        border: none;
+        border-bottom: 2px solid #8c2878;
+        background: transparent;
+        color: #000;
+    }
+
+    .news-content-page .nav-tabs .nav-link:hover {
+        border: none;
+    }
+
+    .news-content-page .nav-tabs .nav-link {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.25rem;
+        color: #000;
+        border: 0;
+    }
+
+.news-update .title-news {
+    padding: 2rem;
+}
+
+.news-update {
+    margin-top: 4rem;
+}
+
+    .news-update .border-3-tim {
+        border: 3px solid #8c2878;
+        border-radius: 1.5rem;
+    }
+
+.list-news-update .title-news {
+    padding: 1rem;
+}
+
+.image-news {
+    border-radius: 2rem;
+}
+
+.list-item-news {
+    padding: 1rem 2.5rem;
+}
+
+.item-news-list {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2rem;
+    padding-top: 0.5rem;
+}
+
+.title-hot-news h2 {
+    padding: 0.5rem 2rem 0.25rem;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    margin-bottom: 0;
+}
+
+.title-hot-news {
+    border-bottom: 3px solid #8c2878;
+}
+
+.hot-news {
+    margin-top: 3rem;
+}
+
+.left-news .item-news-list {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.btn-more,
+.btn-more:focus-visible,
+.btn-more:hover {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.border-bot-ccc {
+    border-bottom: 2px solid #ccc;
+}
+
+@media (max-width: 767.98px) {
+    .news-content-page .nav-tabs {
+        padding: 0;
+    }
+}

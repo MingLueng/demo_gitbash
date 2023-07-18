@@ -1,0 +1,18 @@
+﻿@{
+    var proimages = ViewBag.ListPro as FestivalMarket.Models.EF.Product;
+}
+@if (proimages != null)
+{
+    <div class="row item-level">
+        <div class="col-12  my-4">
+            <div class="img-fes-go">
+                <img class="w-100" src="@proimages.Image" alt="img">
+            </div>
+        </div>
+        <div class="col-12  my-4 p-3 p-lg-5 mb-lg-0">
+            <h5 class="color-tim font-20 pl-2">  <a style="text-decoration: none" href="/chi-tiet-products/@proimages.Slug-@proimages.Id">@proimages.Title</a> </h5>
+            <h3 class="color-red font-30 pl-2"> @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(proimages.Description))</h3>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.FilmsView>
+@if (Model != null && Model.Any())
+{
+    <div class="week-content row">
+        @foreach (var item in Model)
+        {
+
+        <div class="col-12 col-lg-6 ">
+            <div class="item-week ">
+                <div class="image-week">
+                    <img class="w-100" src="@item.Image" alt="okok">
+                </div>
+                <div class="title-news p-3">
+                    <h6 class="font-13 color-tim">@item.CategoryFilm.Title </h6>
+                    <h3 class="font-20 color-red"><a style="text-decoration: none" href="/chi-tiet-films/@item.Slug-@item.Id">@item.Title</a></h3>
+             
+                    <p class="font-13 text-justify ">
+                        @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        }
+    </div>
+    }

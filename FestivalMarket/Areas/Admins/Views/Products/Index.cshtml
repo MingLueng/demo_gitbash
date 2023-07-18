@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý sản phẩm";
+    Layout = "~/Areas/Admins/Views/Shared/_LayoutAdmins.cshtml";
+}
+
+
+<div class="show-table">
+    <div class="container-fluid">
+        @Html.Partial("_Index")
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/pagination.js"></script>
+    <script>
+        debugger
+        pageSize = 15;
+        $.ajax({
+            url: '/Admins/Products/GetDataJSON',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+
+            },
+            beforeSend: function () {
+
+            },
+            success: function (res) {
+                data = res;
+                dataFilter = res;
+                updatePageCount(dataFilter.length, pageSize);
+                setPagination(pageCount, 1);
+                setPagingDataHtml(pageSize, 1);
+                let count = data.length;
+                $('#record-count').html(`Tổng số có:<span class="btn-tools btn-red">${count}</span> sản phẩm`)
+            },
+            error: function () {
+
+            },
+            complete: function () {
+
+            }
+        })
+        setSelectDisplay();
+        function setDataHtml(obj, stt) {
+            let rowStatus = '<span class="text-success">Hiển thị</span>';
+            let Modified_Date = new Date();
+            if (obj.ModifiedDate != null)
+                Modified_Date = (new Date(parseInt(obj.ModifiedDate.substr(6)))).toLocaleDateString();
+            if (obj.IsActive !=1) {
+                rowStatus = '<span class="text-danger">Đang ẩn</span>';
+            }
+
+            let row = ` <tr>
+                                <td class="text-center"> ${stt}</td>
+                                <td> ${obj.Code}</td>
+                                <td> ${obj.Title}</td>
+
+
+                                <td> ${Modified_Date}</td>
+                                <td> ${obj.Views}</td>
+                                <td> ${rowStatus}</td>
+                                <td class="d-flex justify-content-end">
+                                    <div>
+                                        <button class="btn-green btn-event" onclick="window.open('/${obj.Slug}')"><i class="fas fa-info-circle"></i> </button>
+                                        <button class="btn-yellow btn-event" onclick="btnEditClick(${obj.Id})"><i class="far fa-edit"></i> </button>
+                                        <button class="btn-red btn-event" role="button" onclick="deleteByID(${obj.Id})"><i class="far fa-trash-alt"></i> </button>
+                                        </div>
+                                    </td>
+                                </tr>`;
+
+            $('#myTable tbody').append(row);
+        }
+        function setListDataHtml(data, sttStart) {
+            $('#myTable tbody').html('');
+            let stt = sttStart;
+            $.each(data, function (index, item) {
+                setDataHtml(item, stt)
+                stt++;
+            })
+        }
+        function searchInput() {
+            $('.search input').change(function () {
+                let text = $(this).val();
+                text = text.trim();
+                dataFilter = data.filter(x => x.Title.toLowerCase().includes(text.toLowerCase().trim()));
+                updatePageCount(dataFilter.length, pageSize);
+                setPagination(pageCount, 1);
+                setPagingDataHtml(pageSize, 1);
+            })
+            $('.search input').keyup(function (e) {
+                if (e.keyCode == 13) {
+                    let text = $(this).val();
+                    text = text.trim();
+                    dataFilter = data.filter(x => x.Title.toLowerCase().includes(text.toLowerCase().trim()));
+                    updatePageCount(dataFilter.length, pageSize);
+                    setPagination(pageCount, 1);
+                    setPagingDataHtml(pageSize, 1);
+                }
+            })
+        }
+        searchInput();
+        OrderData();
+        function OrderData() {
+            $(document).on('click', '.order-Title[data-status="0"]', function () {
+                sortData('Title', true);
+                setPagination(pageCount, 1);
+                setPagingDataHtml(pageSize, 1);
+                $('.order-Title').attr('data-status', 1);
+            })
+            $(document).on('click', '.order-Title[data-status="1"]', function () {
+                sortData('Title', false);
+                setPagination(pageCount, 1);
+                setPagingDataHtml(pageSize, 1);
+                $('.order-Title').attr('data-status', 0);
+            })
+            $(document).on('click', '.order-CreatedDate[data-status="0"]', function () {
+                sortData('CreatedDate', true);
+                setPagination(pageCount, 1);
+                setPagingDataHtml(pageSize, 1);
+                $('.order-CreatedDate').attr('data-status', 1);
+            })
+            $(document).on('click', '.order-CreatedDate[data-status="1"]', function () {
+                sortData('CreatedDate', false);
+                setPagination(pageCount, 1);
+                setPagingDataHtml(pageSize, 1);
+                $('.order-CreatedDate').attr('data-status', 0);
+            })
+        }
+        function sortData(key, bool) {
+            dataFilter.sort((a, b) => {
+                let aKey = a[key];
+                let bKey = b[key];
+                if (bool == true) {
+                    return (aKey < bKey) ? -1 : ((aKey > bKey) ? 1 : 0);
+                } else {
+                    return (aKey < bKey) ? 1 : ((aKey > bKey) ? -1 : 0);
+                }
+            });
+        }
+
+
+        $(document).ready(function () {
+            $(".btnAdd").click(function () {
+                window.location.href = '/admins/products/create';
+            });
+
+        });
+        function btnEditClick(id) {
+            window.location.href = '/admins/products/edit/' + id;
+        }
+
+
+
+
+    </script>
+
+    <script>
+        function deleteByID(id) {
+            swal({
+                title: "Xóa dữ liệu này?",
+                text: "Dữ liệu xóa sẽ không thể khôi phục!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+                            url: "/Admins/Products/DeleteByID",
+                            type: 'POST',
+                            dataType: 'json',
+                            data: { id: id },
+                        })
+                            .done(function (res) {
+                                if (res == 1) {
+                                    toastr.success('Đã xóa dữ liệu', 'Thông báo');
+                                    LoadData(id);
+                                } else {
+                                    toastr.success('Lỗi xử lý xóa dữ liệu', 'Thông báo');
+                                }
+                            })
+                            .fail(function () {
+
+                            })
+                            .always(function () {
+
+                            });
+                    };
+                });
+        }
+
+        function LoadData(id) {
+            data = data.filter(x => x.Id !== id);
+            dataFilter = data.filter(x => x.Id !== id);
+            updatePageCount(dataFilter.length, pageSize);
+            setPagination(pageCount, 1);
+            setPagingDataHtml(pageSize, 1);
+            let count = data.length;
+            $('#record-count').html(`Tổng số có:<span class="btn-tools btn-red">${count}</span> danh mục`);
+        }
+
+
+    </script>
+}
+
+
+

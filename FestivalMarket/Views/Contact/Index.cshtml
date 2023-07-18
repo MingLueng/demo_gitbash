@@ -1,0 +1,102 @@
+﻿@model FestivalMarket.Models.ContactViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #mapCavas {
+        height: 600px;
+    }
+</style>
+
+
+<section class="content-page  px-57">
+    <div class="text-center lien-he-title">
+        <h2>LIÊN HỆ</h2>
+    </div>
+    <div class="lien-he container-fluid">
+        <div class="row">
+            <div class="col-md-7 col-xs-12">
+                <div class="item">
+                    <div id="mapCavas">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.491367513044!2d105.8068988753878!3d21.013016388318878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abf536ac44b9%3A0x177bb0ee1e09b005!2zVmnhu4duIGPDtG5nIG5naOG7hyB2w6AgxJHDoG8gdOG6oW8gRGV2bWFzdGVy!5e0!3m2!1svi!2sus!4v1688434884783!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-5 col-xs-12">
+                    <div class="item">
+                        <div>
+                            <h3 class="text-red">Hãy liên hệ với chúng tôi</h3>
+                            <p>Chúng tôi luôn sẵn sàng lắng nghe ý kiến và góp ý từ bạn</p>
+                        </div>
+                        <div class="festival-market">
+                            <h3>FESTIVAL MARKET</h3>
+                            <div>
+                                <p>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Thứ 2 - Chủ Nhật: 6:00- 22:30  </span>
+                                </p>
+                                <p>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>089 808 996 </span>
+                                </p>
+                                <div class="d-flex">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <address class="pl-1">3-5 Phạm Văn Đồng, pnường Vĩnh Phước,  thành phố Nha Trang, tỉnh Khánh Hòa</address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div id="show_success"></div>
+    <div class="form-lien-he container-fluid ">
+        @Html.Action("AddContact", "Contact");
+    </div>
+</section>
+@section scripts{
+
+    <script>
+        function OnFailureCO(rs) {
+            if (!rs.success) {
+                $("#show_success").html("Bạn đã gửi phản hồi thất bại!Xin vui lòng thử lại ")
+            }
+        }
+   
+
+      
+        $(document).ready(function () {
+            $('#myform').validate({
+                rules: {
+                    'Title': {
+                        required: true
+                    },
+                    'Name': {
+                        required: true
+                    },
+                    'Phone': {
+                        required: true
+                    },
+                    'Message': {
+                        required: true
+                    },
+                    'Email': {
+                        required: true,
+                        email: true
+                    }
+
+                },
+                messages: {
+                    'Title': '* Bạn không để trống trường này',
+                    'Name': '* Bạn không để trống trường này',
+                    'Phone': '* Bạn không để trống trường này',
+                    'Message': '* Bạn không để trống trường này',
+                    'Email': '* Bạn không để trống trường này',
+                }
+            })
+        })
+    </script>
+
+
+}

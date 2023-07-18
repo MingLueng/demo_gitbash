@@ -1,0 +1,29 @@
+﻿@model IEnumerable<FestivalMarket.Models.EF.Sales>
+<link rel="stylesheet" href="~/Content/assets/styles/khuyen-mai.css">
+<div class="noi-bat">
+    <h2 class="bg-tim text-center">
+        NỔI BẬT
+    </h2>
+
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <div class="item">
+                <div class="img">
+                    <img src="@item.Image" alt="">
+                </div>
+                <div class="content">
+                    <h5><a style="text-decoration: none"href="/chi-tiet-sales/@item.Slug-@item.Id">@item.Title</a></h5>
+                    <p>
+                        @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))
+                    </p>
+                    <p>
+                        <a style="text-decoration:none" href="/chi-tiet-sales/@item.Slug-@item.Id">Xem chi tiết >></a>
+                    </p>
+                </div>
+            </div>
+        }
+    }
+
+</div>

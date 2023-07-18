@@ -1,0 +1,24 @@
+﻿<link href="~/Content/PagedList.css" rel="stylesheet" />
+@model PagedList.PagedList<FestivalMarket.Models.EF.Events>
+@using PagedList.Mvc;
+@using PagedList;
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <div class="d-flex-sk">
+            <div class="img">
+                <img src="@item.Image" alt="">
+            </div>
+            <div class="content">
+                <h3><a style="text-decoration: none;font-size:18px;"href="/chi-tiet-events/@item.Slug-@item.Id">@item.Title</a></h3>
+                <p>
+                    @Html.Raw(FestivalMarket.Common.Utils.cutStringDescription(item.Description))
+</div>
+        </div>
+    }
+}
+<div class="text-center w-100 m-3">
+    @*   <button class="btn bg-tim text-white">XEM THÊM</button>*@
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+</div>
